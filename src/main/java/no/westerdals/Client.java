@@ -2,7 +2,11 @@ package no.westerdals;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.sql.*;
+import java.util.Scanner;
 
 @SuppressWarnings("ALL")
 public class Client {
@@ -11,17 +15,16 @@ public class Client {
         Client pro = new Client();
         try {
             pro.getConnection();
-            //         pro.readTable();
+
+                pro.dropTable();
                  pro.createTable();
             System.out.println("Table created");
                  pro.addBatch();
             System.out.println("Info added");
                  pro.readTable();
             System.out.println("Table read");
-                 pro.dropTable();
+      //           pro.dropTable();
             System.out.println("Table dropped");
-            //    pro.updateTable();
-            //      pro.deleteUser();
             System.out.println("Query done");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -120,36 +123,6 @@ public class Client {
         }
     }
 
-    /*
-    void updateTable() {
-        try {
-            PreparedStatement stmt = con.prepareStatement("UPDATE USERS2 SET AGE = ? WHERE NAME = ?");
-            stmt.setInt(1, 20);
-            stmt.setString(2, "Per");
-            stmt.executeUpdate();
-            System.out.println("Update Done!");
-            stmt.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-    */
-
-    /*
-    void deleteUser() {
-        try{
-            PreparedStatement stmt = con.prepareStatement("DELETE FROM USERS2 WHERE name = ?");
-            stmt.setString(1, "Per");
-            stmt.executeUpdate();
-            System.out.println("SQL DELETED");
-            stmt.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-    */
-
-
     void readTable() {
         try{
             Statement stmt = con.createStatement();
@@ -179,37 +152,41 @@ public class Client {
 
     }
 
-    void readFile() {
-        String insertTableSQL = "INSERT INTO EMNER"
-                + "(id, last, first, balance, Credit, Date, Rating) VALUES"
-                + "(?,?,?,?, ?, ?, ?)";
+    void readFile() throws IOException {
+     /*   String insertTableSQL = "INSERT INTO EMNER"
+                + "(name, subjectid, lecturer, starttime, endtime) VALUES "
+                + "(?,?,?,?,?)";
 
 
-        preparedStatement = myConnection.prepareStatement(insertTableSQL);
+        preparedStatement = con.prepareStatement(insertTableSQL);
+    */
 
-//RETRIEVING INFORMATION FROM CSV FILE
+        try {
+            PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
+            //RETRIEVING INFORMATION FROM CSV FILE
 
 //opening a file input stream
-        BufferedReader reader = new BufferedReader(new FileReader("SAMPLE.csv"));
+            BufferedReader reader = new BufferedReader(new FileReader("Emner.csv"));
 
-        String line = null; //line read from csv
-        Scanner scanner = null; //scanned line
+            String line = null; //line read from csv
+            Scanner scanner = null; //scanned line
 
-        SimpleDateFormat date = new SimpleDateFormat("mm/DD/yyyy");
+            // SimpleDateFormat date = new SimpleDateFormat("mm/DD/yyyy");
 
-        reader.readLine(); //omits the first line
+            reader.readLine(); //omits the first line
 
 //READING FILE LINE BY LINE AND UPLOADING INFORMATION TO DATABASE
-        while((line = reader.readLine()) != null){
-            scanner = new Scanner(line);
-            scanner.useDelimiter(",");
-            while(scanner.hasNext()){
-                preparedStatement.setInt(1,Integer.parseInt(scanner.next()));
-                preparedStatement.setString(2, scanner.next());
-                preparedStatement.setString(3, scanner.next());
-                preparedStatement.setFloat(4, Float.parseFloat(scanner.next()));
-                preparedStatement.setFloat(5, Float.parseFloat(scanner.next()));
-                try {
+            try {
+                while ((line = reader.readLine()) != null) {
+                    scanner = new Scanner(line);
+                    scanner.useDelimiter(",");
+                    while (scanner.hasNext()) {
+                        stmt.setString(1, scanner.next());
+                        stmt.setString(2, scanner.next());
+                        stmt.setString(3, scanner.next());
+                        stmt.setString(4, scanner.next());
+                        stmt.setString(5, scanner.next());
+               /* try {
                     java.util.Date d;
                     d = date.parse(scanner.next());
                     preparedStatement.setDate(6, new java.sql.Date(d.getTime()));
@@ -217,30 +194,33 @@ public class Client {
                     e.printStackTrace();
                 }
                 preparedStatement.setString(7, scanner.next());
+            } */
+                        stmt.executeUpdate();
+                    }
+
+                    stmt.close();
+                    System.out.println("Data imported");
+
+                    reader.close(); //closing CSV reader
+
+                } catch(SQLException e){
+                    e.printStackTrace();
+                }finally{//CLOSING CONNECTION
+                    try {
+                        if (statement != null)
+                            myConnection.close();
+                    } catch (SQLException se) {
+                    }// do nothing
+                    try {
+                        if (myConnection != null)
+                            myConnection.close();
+                    } catch (SQLException se) {
+                        se.printStackTrace();
+                    }
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
             }
-            preparedStatement.executeUpdate();
-        }
-
-        preparedStatement.close();
-        System.out.println("Data imported");
-
-        reader.close(); //closing CSV reader
-
-    } catch (SQLException e){
-        e.printStackTrace();
-    }finally{//CLOSING CONNECTION
-        try{
-            if(statement!=null)
-                myConnection.close();
-        }catch(SQLException se){
-        }// do nothing
-        try{
-            if(myConnection!=null)
-                myConnection.close();
-        }catch(SQLException se){
-            se.printStackTrace();
-        }
+        } catch (SQLException e) {
     }
-
-
 }
