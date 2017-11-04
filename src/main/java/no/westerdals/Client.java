@@ -165,7 +165,7 @@ public class Client {
             PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
             //RETRIEVING INFORMATION FROM CSV FILE
 
-//opening a file input stream
+            //opening a file input stream
             BufferedReader reader = new BufferedReader(new FileReader("Emner.csv"));
 
             String line = null; //line read from csv
@@ -175,7 +175,7 @@ public class Client {
 
             reader.readLine(); //omits the first line
 
-//READING FILE LINE BY LINE AND UPLOADING INFORMATION TO DATABASE
+            //READING FILE LINE BY LINE AND UPLOADING INFORMATION TO DATABASE
             try {
                 while ((line = reader.readLine()) != null) {
                     scanner = new Scanner(line);
@@ -202,25 +202,17 @@ public class Client {
                     System.out.println("Data imported");
 
                     reader.close(); //closing CSV reader
-
-                } catch(SQLException e){
-                    e.printStackTrace();
-                }finally{//CLOSING CONNECTION
-                    try {
-                        if (statement != null)
-                            myConnection.close();
-                    } catch (SQLException se) {
-                    }// do nothing
-                    try {
-                        if (myConnection != null)
-                            myConnection.close();
-                    } catch (SQLException se) {
-                        se.printStackTrace();
-                    }
                 }
+
             } catch (SQLException e) {
                 e.printStackTrace();
+            } finally {
+
             }
+
         } catch (SQLException e) {
+
+        }
+
     }
 }
