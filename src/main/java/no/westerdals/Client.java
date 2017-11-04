@@ -65,32 +65,13 @@ public class Client {
             System.out.println("Which subject do you want - (Use subjectid)? ");
             String emnekode = input.next();
             try {
-                //      Statement stmt = con.createStatement();
-                //     ResultSet rs = stmt.executeQuery("SELECT + emnekode + FROM EMNER");
-                //   ResultSet rs = stmt.executeQuery("select * from EMNER WHERE subjectid = 'PGR200';");
-                //     ResultSet rs = stmt.executeQuery("select * from EMNER Where subjectid = " + emnekode);
-            /*   String sql = "SELECT * FROM EMNER WHERE subjectid = 'PGR200'";
-                ResultSet rs = stmt.executeQuery(sql);
-            */
-            /*
-                PreparedStatement stmt = con.prepareStatement();
-                String sql = "SELECT * FROM EMNER where subjectid = ?";
-
-            //    PreparedStatement stmt = con.prepareStatement("SELECT * FROM EMNER where subjectid = ?");
-                stmt = con.prepareStatement(sql);
-                */
-            /*
-                String sql = "select * from EMNER where subjectid = '" + emnekode +"'";
-                ResultSet rs = stmt.executeQuery(sql);
-
-                */
 
                 // Next make sure this goes into a loop, if invalid, report back to user, then ask for another value
                 String subjectid = emnekode;
                 PreparedStatement prepStmt = con.prepareStatement("select * from EMNER where subjectid = ?");
                 prepStmt.setString(1, subjectid);
                 ResultSet rs = prepStmt.executeQuery();
-
+                /*
                 while (rs.next()) {
                     String name = rs.getString("name");
                     subjectid = rs.getString("subjectid");
@@ -99,7 +80,8 @@ public class Client {
                     String endtime = rs.getString("endtime");
 
                     System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime);
-                }
+                } */
+                readTablePrint(rs);
                 System.out.println("Table read - Finished");
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -108,15 +90,15 @@ public class Client {
 
     }
 
-        /* Create */
+    /* Create */
 
     void createTable() {
         try {
-            String q = "CREATE TABLE EMNER(" + "name varchar(100),"
-                    + "subjectid varchar(30), "
+            String q = "CREATE TABLE EMNER(" + "name varchar(50),"
+                    + "subjectid varchar(10), "
                     + "lecturer varchar(50),"
-                    + "starttime varchar(30),"
-                    + "endtime varchar(30)"
+                    + "starttime varchar(20),"
+                    + "endtime varchar(20)"
                     + ");";
             Statement stmt = con.createStatement();
             stmt.execute(q);
@@ -126,52 +108,8 @@ public class Client {
             e.printStackTrace();
         }
     }
-/*
-    void addBatch() {
-        try {
 
-            Statement stmt = con.createStatement();
-            stmt.addBatch("INSERT INTO USERS2 VALUES('USER1', 25)");
-            stmt.addBatch("INSERT INTO USERS2 VALUES('USER2', 30)");
-            stmt.addBatch("INSERT INTO USERS2 VALUES('USER3', 40)");
-            stmt.addBatch("INSERT INTO USERS2 VALUES('USER5', 60)");
-
-            PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
-            stmt.setString(1, "Avansert Javaprogrammering 2");
-            stmt.setString(2, "PGR200");
-            stmt.setString(3, "Per Lauvas");
-            stmt.setString(4, "21. August");
-            stmt.setString(5, "19. Novemeber");
-            stmt.addBatch();
-            stmt.clearParameters();
-
-            stmt.setString(1, "Mobile Okosystemer");
-            stmt.setString(2, "IS3200");
-            stmt.setString(3, "Alexander Dreyer");
-            stmt.setString(4, "23. August");
-            stmt.setString(5, "14. Novemeber");
-            stmt.addBatch();
-            stmt.clearParameters();
-
-            stmt.setString(1, "Grensesnittdesign");
-            stmt.setString(2, "DS3800");
-            stmt.setString(3, "Andreas Beining");
-            stmt.setString(4, "24. August");
-            stmt.setString(5, "24. Novemeber");
-            stmt.addBatch();
-            stmt.clearParameters();
-            int [] res = stmt.executeBatch();
-
-            for (int re : res) {
-                System.out.println(re);
-            }
-            stmt.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-    } */
-
+    // Drop function for development process
     void dropTable() {
         try {
             Statement stmt = con.createStatement();
@@ -188,7 +126,7 @@ public class Client {
         try{
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM EMNER");
-            while(rs.next()) {
+     /*       while(rs.next()) {
                 String name = rs.getString("name");
                 String subjectid = rs.getString("subjectid");
                 String lecturer = rs.getString("lecturer");
@@ -196,31 +134,52 @@ public class Client {
                 String endtime = rs.getString("endtime");
 
                 System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime );
-            }
+                */
+          //  }
+            readTablePrint(rs);
             System.out.println("Table read - Finished");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
+    void readTablePrint(ResultSet rs) {
+        try {
+            while(rs.next()) {
+            String name = rs.getString("name");
+            String subjectid = rs.getString("subjectid");
+            String lecturer = rs.getString("lecturer");
+            String starttime = rs.getString("starttime");
+            String endtime = rs.getString("endtime");
+
+            System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Table read - Finished");
+
+    }
+
+    // Reference for importing of CSV - https://coderanch.com/t/572623/databases/insert-CSV-values-file-MySQL
     //Read from CSV File and input to DB
     void readFile() throws IOException {
         try {
             PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
 
 
-            //Open a file input stream for CSV
-            BufferedReader reader = new BufferedReader(new FileReader("Emner.csv"));
+            //Open a file input stream for CSV - Towards a specific file
+            BufferedReader CSVreader = new BufferedReader(new FileReader("Emner.csv"));
 
-            String line = null; //line read from csv
-            Scanner scanner = null; //scanned line
+            String lineRead; //line read from csv
+            Scanner scanner;
 
-            reader.readLine(); //omits the first line
+            CSVreader.readLine(); //ignores the first line
 
             // Reading file line by line and uploads the information to DB
             try {
-                while ((line = reader.readLine()) != null) {
-                    scanner = new Scanner(line);
+                while ((lineRead = CSVreader.readLine()) != null) {
+                    scanner = new Scanner(lineRead);
                     scanner.useDelimiter(";");
                     while (scanner.hasNext()) {
                         try {
@@ -235,11 +194,11 @@ public class Client {
                         }
                     }
 
-                    System.out.println("Data imported");
+                    System.out.println("Subject added to DB" );
 
                 }
                 stmt.close();
-                reader.close(); //closing CSV reader
+                CSVreader.close();
 
             } catch (SQLException e) {
                 e.printStackTrace();

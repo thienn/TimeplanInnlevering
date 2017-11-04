@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b806a61e-3f58-4631-a123-9e40d390adb5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/App.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Client2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/DB2.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Presenter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Util.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Client2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/DB2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Util.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Client.class" afterPath="$PROJECT_DIR$/target/classes/no/westerdals/Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/DBHandler.class" afterPath="$PROJECT_DIR$/target/classes/no/westerdals/DBHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Presenter.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" afterPath="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" afterPath="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,19 +19,15 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+            <state relative-caret-position="317">
+              <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1509831800925" expanded="true" signature="2570:2609" ph="SELECT * FRO... EMNER" />
-                <marker date="1509831800925" expanded="true" signature="2678:2717" ph="SELECT * FRO... EMNER" />
-                <marker date="1509831800925" expanded="true" signature="2835:2890" ph="select * fro... EMNER" />
-                <marker date="1509831800925" expanded="true" signature="3198:3237" ph="select * fro... EMNER" />
-                <marker date="1509831800925" expanded="true" signature="4137:4390" ph="CREATE TABLE... EMNER" />
-                <marker date="1509831800925" expanded="true" signature="5075:5110" ph="INSERT INTO EMNER... " />
-                <marker date="1509831800925" expanded="true" signature="6391:6407" ph="DROP TABLE E... " />
-                <marker date="1509831800925" expanded="true" signature="6741:6760" ph="SELECT * FRO... EMNER" />
-                <marker date="1509831800925" expanded="true" signature="7571:7606" ph="INSERT INTO EMNER... " />
+                <marker date="1509835969200" expanded="true" signature="2169:2208" ph="select * fro... EMNER" />
+                <marker date="1509835969200" expanded="true" signature="3161:3413" ph="CREATE TABLE... EMNER" />
+                <marker date="1509835969200" expanded="true" signature="3831:3847" ph="DROP TABLE E... " />
+                <marker date="1509835969200" expanded="true" signature="4181:4200" ph="SELECT * FRO... EMNER" />
+                <marker date="1509835969200" expanded="true" signature="5855:5890" ph="INSERT INTO EMNER... " />
               </folding>
             </state>
           </provider>
@@ -466,7 +451,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32549000" />
+    <option name="totallyTimeSpent" value="33863000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="0" />
@@ -652,15 +637,11 @@
           <caret line="81" column="33" lean-forward="false" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1509831800925" expanded="true" signature="2570:2609" ph="SELECT * FRO... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="2678:2717" ph="SELECT * FRO... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="2835:2890" ph="select * fro... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="3198:3237" ph="select * fro... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="4137:4390" ph="CREATE TABLE... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="5075:5110" ph="INSERT INTO EMNER... " />
-            <marker date="1509831800925" expanded="true" signature="6391:6407" ph="DROP TABLE E... " />
-            <marker date="1509831800925" expanded="true" signature="6741:6760" ph="SELECT * FRO... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="7571:7606" ph="INSERT INTO EMNER... " />
+            <marker date="1509835969200" expanded="true" signature="2169:2208" ph="select * fro... EMNER" />
+            <marker date="1509835969200" expanded="true" signature="3161:3413" ph="CREATE TABLE... EMNER" />
+            <marker date="1509835969200" expanded="true" signature="3831:3847" ph="DROP TABLE E... " />
+            <marker date="1509835969200" expanded="true" signature="4181:4200" ph="SELECT * FRO... EMNER" />
+            <marker date="1509835969200" expanded="true" signature="5855:5890" ph="INSERT INTO EMNER... " />
           </folding>
         </state>
       </provider>
@@ -940,19 +921,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        <state relative-caret-position="317">
+          <caret line="85" column="38" lean-forward="true" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1509831800925" expanded="true" signature="2570:2609" ph="SELECT * FRO... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="2678:2717" ph="SELECT * FRO... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="2835:2890" ph="select * fro... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="3198:3237" ph="select * fro... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="4137:4390" ph="CREATE TABLE... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="5075:5110" ph="INSERT INTO EMNER... " />
-            <marker date="1509831800925" expanded="true" signature="6391:6407" ph="DROP TABLE E... " />
-            <marker date="1509831800925" expanded="true" signature="6741:6760" ph="SELECT * FRO... EMNER" />
-            <marker date="1509831800925" expanded="true" signature="7571:7606" ph="INSERT INTO EMNER... " />
+            <marker date="1509835969200" expanded="true" signature="2169:2208" ph="select * fro... EMNER" />
+            <marker date="1509835969200" expanded="true" signature="3161:3413" ph="CREATE TABLE... EMNER" />
+            <marker date="1509835969200" expanded="true" signature="3831:3847" ph="DROP TABLE E... " />
+            <marker date="1509835969200" expanded="true" signature="4181:4200" ph="SELECT * FRO... EMNER" />
+            <marker date="1509835969200" expanded="true" signature="5855:5890" ph="INSERT INTO EMNER... " />
           </folding>
         </state>
       </provider>
