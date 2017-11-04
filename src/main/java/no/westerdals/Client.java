@@ -12,6 +12,7 @@ public class Client {
             pro.getConnection();
        //     pro.createTable();
         //    pro.updateTable();
+          //      pro.deleteTable();
             System.out.println("Query done");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -61,6 +62,21 @@ public class Client {
         }
     }
     */
+
+    /*
+    void deleteTable() {
+        try{
+            PreparedStatement stmt = con.prepareStatement("DELETE FROM USERS2 WHERE name = ?");
+            stmt.setString(1, "Per");
+            stmt.executeUpdate();
+            System.out.println("SQL DELETED");
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    */
+
     /*
     public Connection getConnection() throws SQLException {
         MysqlDataSource ds = new MysqlDataSource();
