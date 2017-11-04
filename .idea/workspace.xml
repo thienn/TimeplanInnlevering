@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b806a61e-3f58-4631-a123-9e40d390adb5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Emner.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Client.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/App.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Client2.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/DB2.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Presenter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Util.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Client2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/DB2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Util.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Client.class" afterPath="$PROJECT_DIR$/target/classes/no/westerdals/Client.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/DBHandler.class" afterPath="$PROJECT_DIR$/target/classes/no/westerdals/DBHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" afterPath="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" afterPath="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,48 +27,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Client2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-931">
-              <caret line="75" column="10" lean-forward="false" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1509760350353" expanded="true" signature="1002:1019" ph="INSERT INTO USERS... " />
-                <marker date="1509760350353" expanded="true" signature="1002:1020" ph="INSERT INTO USERS2... " />
-                <marker date="1509760350353" expanded="true" signature="1002:1040" ph="INSERT INTO USERS2... " />
-                <marker date="1509760350353" expanded="true" signature="1071:1109" ph="INSERT INTO USERS2... " />
-                <marker date="1509760350353" expanded="true" signature="1140:1178" ph="INSERT INTO USERS2... " />
-                <marker date="1509760350353" expanded="true" signature="1209:1247" ph="INSERT INTO USERS2... " />
-                <marker date="1509760350353" expanded="true" signature="1325:1355" ph="INSERT INTO USERS2... " />
-                <marker date="1509760350353" expanded="true" signature="2143:2280" ph="CREATE TABLE... DB1" />
-                <marker date="1509760350353" expanded="true" signature="2651:2691" ph="UPDATE USERS... " />
-                <marker date="1509760350353" expanded="true" signature="3069:3102" ph="DELETE FROM " />
-                <marker date="1509760350353" expanded="true" signature="3816:3836" ph="SELECT * FRO... USERS2" />
-                <marker date="1509760350353" expanded="true" signature="4593:4612" ph="SELECT * FRO... USERS" />
-                <marker date="1509760350353" expanded="true" signature="5088:5108" ph="SELECT * FRO... USERS2" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="82" column="49" lean-forward="false" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="49" />
+            <state relative-caret-position="217">
+              <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#252#276#0" expanded="true" />
-                <marker date="1509773467270" expanded="true" signature="2879:2918" ph="SELECT * FRO... EMNER" />
-                <marker date="1509773467270" expanded="true" signature="2987:3026" ph="SELECT * FRO... EMNER" />
-                <marker date="1509773467270" expanded="true" signature="3144:3199" ph="select * fro... EMNER" />
-                <marker date="1509773467270" expanded="true" signature="3389:3428" ph="select * fro... EMNER" />
-                <marker date="1509773467270" expanded="true" signature="4317:4570" ph="CREATE TABLE... EMNER" />
-                <marker date="1509773467270" expanded="true" signature="5281:5316" ph="INSERT INTO EMNER... " />
-                <marker date="1509773467270" expanded="true" signature="6778:6794" ph="DROP TABLE E... " />
-                <marker date="1509773467270" expanded="true" signature="7128:7147" ph="SELECT * FRO... EMNER" />
-                <marker date="1509773467270" expanded="true" signature="8219:8254" ph="INSERT INTO EMNER... " />
+                <marker date="1509831800925" expanded="true" signature="2570:2609" ph="SELECT * FRO... EMNER" />
+                <marker date="1509831800925" expanded="true" signature="2678:2717" ph="SELECT * FRO... EMNER" />
+                <marker date="1509831800925" expanded="true" signature="2835:2890" ph="select * fro... EMNER" />
+                <marker date="1509831800925" expanded="true" signature="3198:3237" ph="select * fro... EMNER" />
+                <marker date="1509831800925" expanded="true" signature="4137:4390" ph="CREATE TABLE... EMNER" />
+                <marker date="1509831800925" expanded="true" signature="5075:5110" ph="INSERT INTO EMNER... " />
+                <marker date="1509831800925" expanded="true" signature="6391:6407" ph="DROP TABLE E... " />
+                <marker date="1509831800925" expanded="true" signature="6741:6760" ph="SELECT * FRO... EMNER" />
+                <marker date="1509831800925" expanded="true" signature="7571:7606" ph="INSERT INTO EMNER... " />
               </folding>
             </state>
           </provider>
@@ -85,17 +68,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DB2.java">
+      <file leaf-file-name="InputHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/InputHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1507749109602" expanded="true" signature="675:741" ph="insert into users... " />
-                <marker date="1507749109602" expanded="true" signature="695:741" ph="insert into users... " />
-                <marker date="1507749109602" expanded="true" signature="1607:1680" ph="insert into USERS2... " />
-              </folding>
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,8 +81,8 @@
       <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+            <state relative-caret-position="299">
+              <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,26 +100,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InputHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/InputHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Presenter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Presenter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -150,6 +108,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>connection</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -164,14 +127,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Util.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/DB2.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Client2.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Emner.csv" />
         <option value="$PROJECT_DIR$/Emner.csv" />
+        <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" />
       </list>
     </option>
@@ -503,7 +466,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25954000" />
+    <option name="totallyTimeSpent" value="32549000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="0" />
@@ -637,12 +600,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="427">
           <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1507749109602" expanded="true" signature="675:741" ph="insert into users... " />
-            <marker date="1507749109602" expanded="true" signature="695:741" ph="insert into users... " />
-            <marker date="1507749109602" expanded="true" signature="1607:1680" ph="insert into USERS2... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -684,22 +642,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-931">
           <caret line="75" column="10" lean-forward="false" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1509760350353" expanded="true" signature="1002:1019" ph="INSERT INTO USERS... " />
-            <marker date="1509760350353" expanded="true" signature="1002:1020" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1002:1040" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1071:1109" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1140:1178" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1209:1247" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1325:1355" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="2143:2280" ph="CREATE TABLE... DB1" />
-            <marker date="1509760350353" expanded="true" signature="2651:2691" ph="UPDATE USERS... " />
-            <marker date="1509760350353" expanded="true" signature="3069:3102" ph="DELETE FROM " />
-            <marker date="1509760350353" expanded="true" signature="3816:3836" ph="SELECT * FRO... USERS2" />
-            <marker date="1509760350353" expanded="true" signature="4593:4612" ph="SELECT * FRO... USERS" />
-            <marker date="1509760350353" expanded="true" signature="5088:5108" ph="SELECT * FRO... USERS2" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -709,16 +652,15 @@
           <caret line="81" column="33" lean-forward="false" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#252#276#0" expanded="true" />
-            <marker date="1509773467270" expanded="true" signature="2879:2918" ph="SELECT * FRO... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="2987:3026" ph="SELECT * FRO... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="3144:3199" ph="select * fro... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="3389:3428" ph="select * fro... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="4317:4570" ph="CREATE TABLE... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="5281:5316" ph="INSERT INTO EMNER... " />
-            <marker date="1509773467270" expanded="true" signature="6778:6794" ph="DROP TABLE E... " />
-            <marker date="1509773467270" expanded="true" signature="7128:7147" ph="SELECT * FRO... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="8219:8254" ph="INSERT INTO EMNER... " />
+            <marker date="1509831800925" expanded="true" signature="2570:2609" ph="SELECT * FRO... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="2678:2717" ph="SELECT * FRO... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="2835:2890" ph="select * fro... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="3198:3237" ph="select * fro... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="4137:4390" ph="CREATE TABLE... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="5075:5110" ph="INSERT INTO EMNER... " />
+            <marker date="1509831800925" expanded="true" signature="6391:6407" ph="DROP TABLE E... " />
+            <marker date="1509831800925" expanded="true" signature="6741:6760" ph="SELECT * FRO... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="7571:7606" ph="INSERT INTO EMNER... " />
           </folding>
         </state>
       </provider>
@@ -727,22 +669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1509760350353" expanded="true" signature="1002:1019" ph="INSERT INTO USERS... " />
-            <marker date="1509760350353" expanded="true" signature="1002:1020" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1002:1040" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1071:1109" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1140:1178" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1209:1247" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1325:1355" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="2143:2280" ph="CREATE TABLE... DB1" />
-            <marker date="1509760350353" expanded="true" signature="2651:2691" ph="UPDATE USERS... " />
-            <marker date="1509760350353" expanded="true" signature="3069:3102" ph="DELETE FROM " />
-            <marker date="1509760350353" expanded="true" signature="3816:3836" ph="SELECT * FRO... USERS2" />
-            <marker date="1509760350353" expanded="true" signature="4593:4612" ph="SELECT * FRO... USERS" />
-            <marker date="1509760350353" expanded="true" signature="5088:5108" ph="SELECT * FRO... USERS2" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -750,12 +677,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1507749109602" expanded="true" signature="675:741" ph="insert into users... " />
-            <marker date="1507749109602" expanded="true" signature="695:741" ph="insert into users... " />
-            <marker date="1507749109602" expanded="true" signature="1607:1680" ph="insert into USERS2... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -825,22 +747,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1509760350353" expanded="true" signature="1002:1019" ph="INSERT INTO USERS... " />
-            <marker date="1509760350353" expanded="true" signature="1002:1020" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1002:1040" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1071:1109" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1140:1178" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1209:1247" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1325:1355" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="2143:2280" ph="CREATE TABLE... DB1" />
-            <marker date="1509760350353" expanded="true" signature="2651:2691" ph="UPDATE USERS... " />
-            <marker date="1509760350353" expanded="true" signature="3069:3102" ph="DELETE FROM " />
-            <marker date="1509760350353" expanded="true" signature="3816:3836" ph="SELECT * FRO... USERS2" />
-            <marker date="1509760350353" expanded="true" signature="4593:4612" ph="SELECT * FRO... USERS" />
-            <marker date="1509760350353" expanded="true" signature="5088:5108" ph="SELECT * FRO... USERS2" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -906,26 +813,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,45 +838,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="28" lean-forward="false" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DB2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1507749109602" expanded="true" signature="675:741" ph="insert into users... " />
-            <marker date="1507749109602" expanded="true" signature="695:741" ph="insert into users... " />
-            <marker date="1507749109602" expanded="true" signature="1607:1680" ph="insert into USERS2... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/InputHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,33 +864,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-931">
-          <caret line="75" column="10" lean-forward="false" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1509760350353" expanded="true" signature="1002:1019" ph="INSERT INTO USERS... " />
-            <marker date="1509760350353" expanded="true" signature="1002:1020" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1002:1040" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1071:1109" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1140:1178" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1209:1247" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="1325:1355" ph="INSERT INTO USERS2... " />
-            <marker date="1509760350353" expanded="true" signature="2143:2280" ph="CREATE TABLE... DB1" />
-            <marker date="1509760350353" expanded="true" signature="2651:2691" ph="UPDATE USERS... " />
-            <marker date="1509760350353" expanded="true" signature="3069:3102" ph="DELETE FROM " />
-            <marker date="1509760350353" expanded="true" signature="3816:3836" ph="SELECT * FRO... USERS2" />
-            <marker date="1509760350353" expanded="true" signature="4593:4612" ph="SELECT * FRO... USERS" />
-            <marker date="1509760350353" expanded="true" signature="5088:5108" ph="SELECT * FRO... USERS2" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Emner.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2310">
+          <caret line="154" column="28" lean-forward="false" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -1051,22 +888,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="82" column="49" lean-forward="false" selection-start-line="82" selection-start-column="44" selection-end-line="82" selection-end-column="49" />
+        <state relative-caret-position="185">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DB2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="20" lean-forward="true" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/InputHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#252#276#0" expanded="true" />
-            <marker date="1509773467270" expanded="true" signature="2879:2918" ph="SELECT * FRO... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="2987:3026" ph="SELECT * FRO... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="3144:3199" ph="select * fro... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="3389:3428" ph="select * fro... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="4317:4570" ph="CREATE TABLE... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="5281:5316" ph="INSERT INTO EMNER... " />
-            <marker date="1509773467270" expanded="true" signature="6778:6794" ph="DROP TABLE E... " />
-            <marker date="1509773467270" expanded="true" signature="7128:7147" ph="SELECT * FRO... EMNER" />
-            <marker date="1509773467270" expanded="true" signature="8219:8254" ph="INSERT INTO EMNER... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="69" column="9" lean-forward="false" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1509831800925" expanded="true" signature="2570:2609" ph="SELECT * FRO... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="2678:2717" ph="SELECT * FRO... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="2835:2890" ph="select * fro... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="3198:3237" ph="select * fro... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="4137:4390" ph="CREATE TABLE... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="5075:5110" ph="INSERT INTO EMNER... " />
+            <marker date="1509831800925" expanded="true" signature="6391:6407" ph="DROP TABLE E... " />
+            <marker date="1509831800925" expanded="true" signature="6741:6760" ph="SELECT * FRO... EMNER" />
+            <marker date="1509831800925" expanded="true" signature="7571:7606" ph="INSERT INTO EMNER... " />
           </folding>
         </state>
       </provider>

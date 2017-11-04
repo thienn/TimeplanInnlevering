@@ -9,51 +9,53 @@ import java.sql.*;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-@SuppressWarnings("ALL")
 public class Client {
     Connection con;
     public static void main(String[] args) {
-        Client pro = new Client();
+        Client program = new Client();
+
         try {
-            pro.getConnection();
+            program.getConnection();
+            System.out.println("Database Connection Success");
 
-            pro.dropTable();
-            pro.createTable();
-            System.out.println("Table created");
+            // Drops table if it exist - for testing purposes
+            program.dropTable();
 
+            // Create table
+            program.createTable();
+
+            // Runs through method for reading from CSV File
             try {
-                pro.readFile();
+                program.readFile();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-  //          System.out.println("Read file");
-        //         pro.addBatch();
-        //    System.out.println("Info added");
-  //        pro.readTable();
-  //       System.out.println("Table read");
-  //            pro.dropTable();
-   //        System.out.println("Table dropped");
-            System.out.println("Query done");
 
-            pro.userInput();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        /*
-        try {
-            pro.getConnection();
-            System.out.println("Database Connection Success");
+            System.out.println("Setup of DB and populating successful");
+            // Ask for user input - Read part
+            program.userInput();
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Database Connection Failed");
         }
-        */
+    }
+
+
+    public Connection getConnection() throws SQLException {
+        MysqlDataSource ds = new MysqlDataSource();
+        ds.setDatabaseName("myDB");
+        ds.setServerName("localhost");
+        ds.setUser("root");
+        ds.setPassword("gamer1234");
+        con = ds.getConnection();
+        return con;
 
     }
 
+
+
     void userInput() {
         int values;
-        String emnekode;
         Scanner input = new Scanner(System.in);
         System.out.println("If you want all of the subjects out type 1, if you want a specific one type 2: ");
         values = input.nextInt();
@@ -61,7 +63,7 @@ public class Client {
             readTable();
         } else if (values == 2) {
             System.out.println("Which subject do you want - (Use subjectid)? ");
-            emnekode = input.next();
+            String emnekode = input.next();
             try {
                 //      Statement stmt = con.createStatement();
                 //     ResultSet rs = stmt.executeQuery("SELECT + emnekode + FROM EMNER");
@@ -70,14 +72,6 @@ public class Client {
             /*   String sql = "SELECT * FROM EMNER WHERE subjectid = 'PGR200'";
                 ResultSet rs = stmt.executeQuery(sql);
             */
-
-            /*
-             String sql = "select * from EMNER where subjectid = '" + emnekode +"'";
-                String query = "select LastModified from CacheTable where url = ?";
-                prepStmt = conn.prepareStatement(query);
-                prepStmt.setString(1, url);
-                rs = prepStmt.executeQuery();
-              */
             /*
                 PreparedStatement stmt = con.prepareStatement();
                 String sql = "SELECT * FROM EMNER where subjectid = ?";
@@ -90,6 +84,8 @@ public class Client {
                 ResultSet rs = stmt.executeQuery(sql);
 
                 */
+
+                // Next make sure this goes into a loop, if invalid, report back to user, then ask for another value
                 String subjectid = emnekode;
                 PreparedStatement prepStmt = con.prepareStatement("select * from EMNER where subjectid = ?");
                 prepStmt.setString(1, subjectid);
@@ -104,7 +100,7 @@ public class Client {
 
                     System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime);
                 }
-                System.out.println("Table read");
+                System.out.println("Table read - Finished");
             } catch (SQLException e) {
                 e.printStackTrace();
             }
@@ -130,16 +126,16 @@ public class Client {
             e.printStackTrace();
         }
     }
-
+/*
     void addBatch() {
         try {
-            /*
+
             Statement stmt = con.createStatement();
             stmt.addBatch("INSERT INTO USERS2 VALUES('USER1', 25)");
             stmt.addBatch("INSERT INTO USERS2 VALUES('USER2', 30)");
             stmt.addBatch("INSERT INTO USERS2 VALUES('USER3', 40)");
             stmt.addBatch("INSERT INTO USERS2 VALUES('USER5', 60)");
-            */
+
             PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
             stmt.setString(1, "Avansert Javaprogrammering 2");
             stmt.setString(2, "PGR200");
@@ -169,18 +165,12 @@ public class Client {
             for (int re : res) {
                 System.out.println(re);
             }
-            /*
-            int [] ar = stmt.executeBatch();
-            for(int i : ar) {
-                System.out.println(i);
-            } */
-            //   stmt.executeBatch();
             stmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-    }
+    } */
 
     void dropTable() {
         try {
@@ -207,28 +197,19 @@ public class Client {
 
                 System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime );
             }
-            System.out.println("Table read");
+            System.out.println("Table read - Finished");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-    public Connection getConnection() throws SQLException {
-        MysqlDataSource ds = new MysqlDataSource();
-        ds.setDatabaseName("myDB");
-        ds.setServerName("localhost");
-        ds.setUser("root");
-        ds.setPassword("gamer1234");
-        con = ds.getConnection();
-        return con;
 
-    }
-
+    //Read from CSV File and input to DB
     void readFile() throws IOException {
         try {
             PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
-            //RETRIEVING INFORMATION FROM CSV FILE
 
-            //opening a file input stream
+
+            //Open a file input stream for CSV
             BufferedReader reader = new BufferedReader(new FileReader("Emner.csv"));
 
             String line = null; //line read from csv
@@ -236,7 +217,7 @@ public class Client {
 
             reader.readLine(); //omits the first line
 
-            //READING FILE LINE BY LINE AND UPLOADING INFORMATION TO DATABASE
+            // Reading file line by line and uploads the information to DB
             try {
                 while ((line = reader.readLine()) != null) {
                     scanner = new Scanner(line);
