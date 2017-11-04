@@ -4,20 +4,18 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 import java.sql.*;
 
-@SuppressWarnings("ALL")
-public class Client {
+public class Client2 {
     Connection con;
     public static void main(String[] args) {
-        Client pro = new Client();
+        Client2 pro = new Client2();
         try {
             pro.getConnection();
-            //         pro.readTable();
-                 pro.createTable();
-                 pro.addBatch();
-                 pro.readTable();
-                 pro.dropTable();
-            //    pro.updateTable();
-            //      pro.deleteUser();
+            pro.readTable();
+     //       pro.addBatch();
+       //         pro.readTable();
+       //     pro.createTable();
+        //    pro.updateTable();
+          //      pro.deleteTable();
             System.out.println("Query done");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -34,25 +32,6 @@ public class Client {
 
     }
 
-        /* Create */
-
-    void createTable() {
-        try {
-            String q = "CREATE TABLE EMNER(" + "name varchar(100),"
-                    + "subjectid varchar(30), "
-                    + "lecturer varchar(50),"
-                    + "starttime varchar(30),"
-                    + "endtime varchar(30)"
-                    + ");";
-            Statement stmt = con.createStatement();
-            stmt.execute(q);
-            System.out.println("Successfully created table");
-            stmt.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
     void addBatch() {
         try {
             /*
@@ -62,29 +41,16 @@ public class Client {
             stmt.addBatch("INSERT INTO USERS2 VALUES('USER3', 40)");
             stmt.addBatch("INSERT INTO USERS2 VALUES('USER5', 60)");
             */
-            PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
-            stmt.setString(1, "Avansert Javaprogrammering 2");
-            stmt.setString(2, "PGR200");
-            stmt.setString(3, "Per Lauvas");
-            stmt.setString(4, "21. August");
-            stmt.setString(5, "19. Novemeber");
-            stmt.addBatch();
-            stmt.clearParameters();
+            PreparedStatement stmt = con.prepareStatement("INSERT INTO USERS2 VALUES(?,?)");
+            stmt.setString(1, "USERS6");
+            stmt.setInt(2, 40);
+            stmt.addBatch();;
 
-            stmt.setString(1, "Mobile Okosystemer");
-            stmt.setString(2, "IS3200");
-            stmt.setString(3, "Alexander Dreyer");
-            stmt.setString(4, "20. August");
-            stmt.setString(5, "13. Novemeber");
-            stmt.addBatch();
             stmt.clearParameters();
-
-            stmt.setString(1, "Grensesnittdesign");
-            stmt.setString(2, "DS3800");
-            stmt.setString(3, "Andreas Beining");
-            stmt.setString(4, "24. August");
-            stmt.setString(5, "24. Novemeber");
+            stmt.setString(1, "USERS7");
+            stmt.setInt(2, 50);
             stmt.addBatch();
+
             stmt.clearParameters();
             int [] res = stmt.executeBatch();
 
@@ -96,7 +62,7 @@ public class Client {
             for(int i : ar) {
                 System.out.println(i);
             } */
-            //   stmt.executeBatch();
+         //   stmt.executeBatch();
             stmt.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -104,17 +70,24 @@ public class Client {
 
     }
 
-    void dropTable() {
+    /* Create
+
+    void createTable() {
         try {
+            String q = "CREATE TABLE DB1(" + "name varchar(100),"
+                    + "age int, "
+                    + "salary float"
+                    + ");";
             Statement stmt = con.createStatement();
-            String sql = "DROP TABLE EMNER";
-            stmt.executeUpdate(sql);
+            stmt.execute(q);
+            System.out.println("Successfully created table");
             stmt.close();
-            System.out.println("Dropped Table");
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
+
+    */
 
     /*
     void updateTable() {
@@ -132,7 +105,7 @@ public class Client {
     */
 
     /*
-    void deleteUser() {
+    void deleteTable() {
         try{
             PreparedStatement stmt = con.prepareStatement("DELETE FROM USERS2 WHERE name = ?");
             stmt.setString(1, "Per");
@@ -145,19 +118,27 @@ public class Client {
     }
     */
 
+    /*
+    public Connection getConnection() throws SQLException {
+        MysqlDataSource ds = new MysqlDataSource();
+        ds.setDatabaseName("myDB");
+        ds.setServerName("localhost");
+        ds.setUser("root");
+        ds.setPassword("gamer1234");
+        Connection con = ds.getConnection();
+        return con;
+
+    }
+    */
 
     void readTable() {
         try{
             Statement stmt = con.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM EMNER");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM USERS2");
             while(rs.next()) {
                 String name = rs.getString("name");
-                String subjectid = rs.getString("subjectid");
-                String lecturer = rs.getString("lecturer");
-                String starttime = rs.getString("starttime");
-                String endtime = rs.getString("endtime");
-
-                System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime );
+                int age = rs.getInt("age");
+                System.out.println("name: " + name + " age: " + age);
             }
             System.out.println("Table read");
         } catch (SQLException e) {
@@ -165,12 +146,34 @@ public class Client {
         }
     }
     public Connection getConnection() throws SQLException {
+        /* Table 1
+        MysqlDataSource ds = new MysqlDataSource();
+        ds.setDatabaseName("myDB");
+        ds.setServerName("localhost");
+        ds.setUser("root");
+        ds.setPassword("gamer1234");
+        Connection con = ds.getConnection();
+        Statement stmt = con.createStatement();
+              ResultSet rs = stmt.executeQuery("SELECT * FROM USERS");
+        while(rs.next()) {
+            String name = rs.getString("name");
+            System.out.println(name);
+        }
+        return con;
+        */
         MysqlDataSource ds = new MysqlDataSource();
         ds.setDatabaseName("myDB");
         ds.setServerName("localhost");
         ds.setUser("root");
         ds.setPassword("gamer1234");
         con = ds.getConnection();
+/*        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM USERS2");
+        while(rs.next()) {
+            String name = rs.getString("name");
+            int age = rs.getInt("age");
+            System.out.println("name: " + name + " age: " + age);
+        } */
         return con;
 
     }
