@@ -13,9 +13,13 @@ public class Client {
             pro.getConnection();
             //         pro.readTable();
                  pro.createTable();
+            System.out.println("Table created");
                  pro.addBatch();
+            System.out.println("Info added");
                  pro.readTable();
+            System.out.println("Table read");
                  pro.dropTable();
+            System.out.println("Table dropped");
             //    pro.updateTable();
             //      pro.deleteUser();
             System.out.println("Query done");
@@ -74,8 +78,8 @@ public class Client {
             stmt.setString(1, "Mobile Okosystemer");
             stmt.setString(2, "IS3200");
             stmt.setString(3, "Alexander Dreyer");
-            stmt.setString(4, "20. August");
-            stmt.setString(5, "13. Novemeber");
+            stmt.setString(4, "23. August");
+            stmt.setString(5, "14. Novemeber");
             stmt.addBatch();
             stmt.clearParameters();
 
@@ -173,6 +177,69 @@ public class Client {
         con = ds.getConnection();
         return con;
 
+    }
+
+    void readFile() {
+        String insertTableSQL = "INSERT INTO EMNER"
+                + "(id, last, first, balance, Credit, Date, Rating) VALUES"
+                + "(?,?,?,?, ?, ?, ?)";
+
+
+        preparedStatement = myConnection.prepareStatement(insertTableSQL);
+
+//RETRIEVING INFORMATION FROM CSV FILE
+
+//opening a file input stream
+        BufferedReader reader = new BufferedReader(new FileReader("SAMPLE.csv"));
+
+        String line = null; //line read from csv
+        Scanner scanner = null; //scanned line
+
+        SimpleDateFormat date = new SimpleDateFormat("mm/DD/yyyy");
+
+        reader.readLine(); //omits the first line
+
+//READING FILE LINE BY LINE AND UPLOADING INFORMATION TO DATABASE
+        while((line = reader.readLine()) != null){
+            scanner = new Scanner(line);
+            scanner.useDelimiter(",");
+            while(scanner.hasNext()){
+                preparedStatement.setInt(1,Integer.parseInt(scanner.next()));
+                preparedStatement.setString(2, scanner.next());
+                preparedStatement.setString(3, scanner.next());
+                preparedStatement.setFloat(4, Float.parseFloat(scanner.next()));
+                preparedStatement.setFloat(5, Float.parseFloat(scanner.next()));
+                try {
+                    java.util.Date d;
+                    d = date.parse(scanner.next());
+                    preparedStatement.setDate(6, new java.sql.Date(d.getTime()));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                preparedStatement.setString(7, scanner.next());
+            }
+            preparedStatement.executeUpdate();
+        }
+
+        preparedStatement.close();
+        System.out.println("Data imported");
+
+        reader.close(); //closing CSV reader
+
+    } catch (SQLException e){
+        e.printStackTrace();
+    }finally{//CLOSING CONNECTION
+        try{
+            if(statement!=null)
+                myConnection.close();
+        }catch(SQLException se){
+        }// do nothing
+        try{
+            if(myConnection!=null)
+                myConnection.close();
+        }catch(SQLException se){
+            se.printStackTrace();
+        }
     }
 
 

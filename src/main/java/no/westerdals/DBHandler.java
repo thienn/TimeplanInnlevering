@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 public class DBHandler {
     public static void main(String[] args) {
+
+        /*
         MysqlDataSource ds = new MysqlDataSource();
         ds.setDatabaseName("Something");
         ds.setServerName("localhost");
@@ -16,6 +18,6 @@ public class DBHandler {
             Connection con = ds.getConnection();
         } catch (SQLException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }
