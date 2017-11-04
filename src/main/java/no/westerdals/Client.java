@@ -26,14 +26,16 @@ public class Client {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            System.out.println("Read file");
+  //          System.out.println("Read file");
         //         pro.addBatch();
         //    System.out.println("Info added");
-       //          pro.readTable();
-       //     System.out.println("Table read");
-      //           pro.dropTable();
-      //      System.out.println("Table dropped");
+  //        pro.readTable();
+  //       System.out.println("Table read");
+  //            pro.dropTable();
+   //        System.out.println("Table dropped");
             System.out.println("Query done");
+
+            pro.userInput();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -46,6 +48,67 @@ public class Client {
             System.out.println("Database Connection Failed");
         }
         */
+
+    }
+
+    void userInput() {
+        int values;
+        String emnekode;
+        Scanner input = new Scanner(System.in);
+        System.out.println("If you want all of the subjects out type 1, if you want a specific one type 2: ");
+        values = input.nextInt();
+        if(values == 1) {
+            readTable();
+        } else if (values == 2) {
+            System.out.println("Which subject do you want - (Use subjectid)? ");
+            emnekode = input.next();
+            try {
+                //      Statement stmt = con.createStatement();
+                //     ResultSet rs = stmt.executeQuery("SELECT + emnekode + FROM EMNER");
+                //   ResultSet rs = stmt.executeQuery("select * from EMNER WHERE subjectid = 'PGR200';");
+                //     ResultSet rs = stmt.executeQuery("select * from EMNER Where subjectid = " + emnekode);
+            /*   String sql = "SELECT * FROM EMNER WHERE subjectid = 'PGR200'";
+                ResultSet rs = stmt.executeQuery(sql);
+            */
+
+            /*
+             String sql = "select * from EMNER where subjectid = '" + emnekode +"'";
+                String query = "select LastModified from CacheTable where url = ?";
+                prepStmt = conn.prepareStatement(query);
+                prepStmt.setString(1, url);
+                rs = prepStmt.executeQuery();
+              */
+            /*
+                PreparedStatement stmt = con.prepareStatement();
+                String sql = "SELECT * FROM EMNER where subjectid = ?";
+
+            //    PreparedStatement stmt = con.prepareStatement("SELECT * FROM EMNER where subjectid = ?");
+                stmt = con.prepareStatement(sql);
+                */
+            /*
+                String sql = "select * from EMNER where subjectid = '" + emnekode +"'";
+                ResultSet rs = stmt.executeQuery(sql);
+
+                */
+                String subjectid = emnekode;
+                PreparedStatement prepStmt = con.prepareStatement("select * from EMNER where subjectid = ?");
+                prepStmt.setString(1, subjectid);
+                ResultSet rs = prepStmt.executeQuery();
+
+                while (rs.next()) {
+                    String name = rs.getString("name");
+                    subjectid = rs.getString("subjectid");
+                    String lecturer = rs.getString("lecturer");
+                    String starttime = rs.getString("starttime");
+                    String endtime = rs.getString("endtime");
+
+                    System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime);
+                }
+                System.out.println("Table read");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 
@@ -171,8 +234,6 @@ public class Client {
             String line = null; //line read from csv
             Scanner scanner = null; //scanned line
 
-            // SimpleDateFormat date = new SimpleDateFormat("mm/DD/yyyy");
-
             reader.readLine(); //omits the first line
 
             //READING FILE LINE BY LINE AND UPLOADING INFORMATION TO DATABASE
@@ -193,9 +254,7 @@ public class Client {
                         }
                     }
 
-
                     System.out.println("Data imported");
-
 
                 }
                 stmt.close();
