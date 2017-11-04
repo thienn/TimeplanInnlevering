@@ -10,6 +10,7 @@ public class Client {
         Client pro = new Client();
         try {
             pro.getConnection();
+            pro.readTable();
        //     pro.createTable();
         //    pro.updateTable();
           //      pro.deleteTable();
@@ -89,6 +90,21 @@ public class Client {
 
     }
     */
+
+    void readTable() {
+        try{
+            Statement stmt = con.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM USERS2");
+            while(rs.next()) {
+                String name = rs.getString("name");
+                int age = rs.getInt("age");
+                System.out.println("name: " + name + " age: " + age);
+            }
+            System.out.println("Table read");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public Connection getConnection() throws SQLException {
         /* Table 1
         MysqlDataSource ds = new MysqlDataSource();
@@ -111,13 +127,13 @@ public class Client {
         ds.setUser("root");
         ds.setPassword("gamer1234");
         con = ds.getConnection();
-        Statement stmt = con.createStatement();
+/*        Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM USERS2");
         while(rs.next()) {
             String name = rs.getString("name");
             int age = rs.getInt("age");
             System.out.println("name: " + name + " age: " + age);
-        }
+        } */
         return con;
 
     }

@@ -19,14 +19,15 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1509758454029" expanded="true" signature="853:990" ph="CREATE TABLE... DB1" />
-                <marker date="1509758454029" expanded="true" signature="1361:1401" ph="UPDATE USERS... " />
-                <marker date="1509758454029" expanded="true" signature="1779:1812" ph="DELETE FROM " />
-                <marker date="1509758454029" expanded="true" signature="2803:2822" ph="SELECT * FRO... USERS" />
-                <marker date="1509758454029" expanded="true" signature="3296:3316" ph="SELECT * FRO... USERS2" />
+                <marker date="1509758745683" expanded="true" signature="882:1019" ph="CREATE TABLE... DB1" />
+                <marker date="1509758745683" expanded="true" signature="1390:1430" ph="UPDATE USERS... " />
+                <marker date="1509758745683" expanded="true" signature="1808:1841" ph="DELETE FROM " />
+                <marker date="1509758745683" expanded="true" signature="2555:2575" ph="SELECT * FRO... USERS2" />
+                <marker date="1509758745683" expanded="true" signature="3332:3351" ph="SELECT * FRO... USERS" />
+                <marker date="1509758745683" expanded="true" signature="3827:3847" ph="SELECT * FRO... USERS2" />
               </folding>
             </state>
           </provider>
@@ -462,12 +463,12 @@
       <workItem from="1507395317746" duration="2223000" />
       <workItem from="1507579739014" duration="8225000" />
       <workItem from="1509240520387" duration="435000" />
-      <workItem from="1509410857753" duration="3081000" />
+      <workItem from="1509410857753" duration="3377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13964000" />
+    <option name="totallyTimeSpent" value="14260000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -481,7 +482,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -519,11 +520,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1509758454029" expanded="true" signature="853:990" ph="CREATE TABLE... DB1" />
-            <marker date="1509758454029" expanded="true" signature="1361:1401" ph="UPDATE USERS... " />
-            <marker date="1509758454029" expanded="true" signature="1779:1812" ph="DELETE FROM " />
-            <marker date="1509758454029" expanded="true" signature="2803:2822" ph="SELECT * FRO... USERS" />
-            <marker date="1509758454029" expanded="true" signature="3296:3316" ph="SELECT * FRO... USERS2" />
+            <marker date="1509758745683" expanded="true" signature="882:1019" ph="CREATE TABLE... DB1" />
+            <marker date="1509758745683" expanded="true" signature="1390:1430" ph="UPDATE USERS... " />
+            <marker date="1509758745683" expanded="true" signature="1808:1841" ph="DELETE FROM " />
+            <marker date="1509758745683" expanded="true" signature="2555:2575" ph="SELECT * FRO... USERS2" />
+            <marker date="1509758745683" expanded="true" signature="3332:3351" ph="SELECT * FRO... USERS" />
+            <marker date="1509758745683" expanded="true" signature="3827:3847" ph="SELECT * FRO... USERS2" />
           </folding>
         </state>
       </provider>
@@ -613,11 +615,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1509758454029" expanded="true" signature="853:990" ph="CREATE TABLE... DB1" />
-            <marker date="1509758454029" expanded="true" signature="1361:1401" ph="UPDATE USERS... " />
-            <marker date="1509758454029" expanded="true" signature="1779:1812" ph="DELETE FROM " />
-            <marker date="1509758454029" expanded="true" signature="2803:2822" ph="SELECT * FRO... USERS" />
-            <marker date="1509758454029" expanded="true" signature="3296:3316" ph="SELECT * FRO... USERS2" />
+            <marker date="1509758745683" expanded="true" signature="882:1019" ph="CREATE TABLE... DB1" />
+            <marker date="1509758745683" expanded="true" signature="1390:1430" ph="UPDATE USERS... " />
+            <marker date="1509758745683" expanded="true" signature="1808:1841" ph="DELETE FROM " />
+            <marker date="1509758745683" expanded="true" signature="2555:2575" ph="SELECT * FRO... USERS2" />
+            <marker date="1509758745683" expanded="true" signature="3332:3351" ph="SELECT * FRO... USERS" />
+            <marker date="1509758745683" expanded="true" signature="3827:3847" ph="SELECT * FRO... USERS2" />
           </folding>
         </state>
       </provider>
@@ -793,14 +796,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1509758454029" expanded="true" signature="853:990" ph="CREATE TABLE... DB1" />
-            <marker date="1509758454029" expanded="true" signature="1361:1401" ph="UPDATE USERS... " />
-            <marker date="1509758454029" expanded="true" signature="1779:1812" ph="DELETE FROM " />
-            <marker date="1509758454029" expanded="true" signature="2803:2822" ph="SELECT * FRO... USERS" />
-            <marker date="1509758454029" expanded="true" signature="3296:3316" ph="SELECT * FRO... USERS2" />
+            <marker date="1509758745683" expanded="true" signature="882:1019" ph="CREATE TABLE... DB1" />
+            <marker date="1509758745683" expanded="true" signature="1390:1430" ph="UPDATE USERS... " />
+            <marker date="1509758745683" expanded="true" signature="1808:1841" ph="DELETE FROM " />
+            <marker date="1509758745683" expanded="true" signature="2555:2575" ph="SELECT * FRO... USERS2" />
+            <marker date="1509758745683" expanded="true" signature="3332:3351" ph="SELECT * FRO... USERS" />
+            <marker date="1509758745683" expanded="true" signature="3827:3847" ph="SELECT * FRO... USERS2" />
           </folding>
         </state>
       </provider>
