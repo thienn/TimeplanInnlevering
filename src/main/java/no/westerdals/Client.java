@@ -11,6 +11,8 @@ public class Client {
         try {
             pro.getConnection();
             pro.readTable();
+       //     pro.addBatch();
+       //         pro.readTable();
        //     pro.createTable();
         //    pro.updateTable();
           //      pro.deleteTable();
@@ -27,6 +29,25 @@ public class Client {
             System.out.println("Database Connection Failed");
         }
         */
+
+    }
+
+    void addBatch() {
+        try {
+            Statement stmt = con.createStatement();
+            stmt.addBatch("INSERT INTO USERS2 VALUES('USER1', 25)");
+            stmt.addBatch("INSERT INTO USERS2 VALUES('USER2', 30)");
+            stmt.addBatch("INSERT INTO USERS2 VALUES('USER3', 40)");
+            stmt.addBatch("INSERT INTO USERS2 VALUES('USER5', 60)");
+            int [] ar = stmt.executeBatch();
+            for(int i : ar) {
+                System.out.println(i);
+            }
+         //   stmt.executeBatch();
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
