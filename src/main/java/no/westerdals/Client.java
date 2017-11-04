@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 @SuppressWarnings("ALL")
@@ -16,15 +17,22 @@ public class Client {
         try {
             pro.getConnection();
 
-                pro.dropTable();
-                 pro.createTable();
+            pro.dropTable();
+            pro.createTable();
             System.out.println("Table created");
-                 pro.addBatch();
-            System.out.println("Info added");
-                 pro.readTable();
-            System.out.println("Table read");
+
+            try {
+                pro.readFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println("Read file");
+        //         pro.addBatch();
+        //    System.out.println("Info added");
+       //          pro.readTable();
+       //     System.out.println("Table read");
       //           pro.dropTable();
-            System.out.println("Table dropped");
+      //      System.out.println("Table dropped");
             System.out.println("Query done");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -153,14 +161,6 @@ public class Client {
     }
 
     void readFile() throws IOException {
-     /*   String insertTableSQL = "INSERT INTO EMNER"
-                + "(name, subjectid, lecturer, starttime, endtime) VALUES "
-                + "(?,?,?,?,?)";
-
-
-        preparedStatement = con.prepareStatement(insertTableSQL);
-    */
-
         try {
             PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
             //RETRIEVING INFORMATION FROM CSV FILE
@@ -179,30 +179,27 @@ public class Client {
             try {
                 while ((line = reader.readLine()) != null) {
                     scanner = new Scanner(line);
-                    scanner.useDelimiter(",");
+                    scanner.useDelimiter(";");
                     while (scanner.hasNext()) {
-                        stmt.setString(1, scanner.next());
-                        stmt.setString(2, scanner.next());
-                        stmt.setString(3, scanner.next());
-                        stmt.setString(4, scanner.next());
-                        stmt.setString(5, scanner.next());
-               /* try {
-                    java.util.Date d;
-                    d = date.parse(scanner.next());
-                    preparedStatement.setDate(6, new java.sql.Date(d.getTime()));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-                preparedStatement.setString(7, scanner.next());
-            } */
-                        stmt.executeUpdate();
+                        try {
+                            stmt.setString(1, scanner.next());
+                            stmt.setString(2, scanner.next());
+                            stmt.setString(3, scanner.next());
+                            stmt.setString(4, scanner.next());
+                            stmt.setString(5, scanner.next());
+                            stmt.executeUpdate();
+                        } catch (NoSuchElementException e) {
+
+                        }
                     }
 
-                    stmt.close();
+
                     System.out.println("Data imported");
 
-                    reader.close(); //closing CSV reader
+
                 }
+                stmt.close();
+                reader.close(); //closing CSV reader
 
             } catch (SQLException e) {
                 e.printStackTrace();
