@@ -22,7 +22,10 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="TimeplanInnlevering" target="1.7" />
+<<<<<<< HEAD
       <module name="TimeplanInnleveringSocket" target="1.7" />
+=======
+>>>>>>> origin/master
     </bytecodeTargetLevel>
   </component>
 </project>

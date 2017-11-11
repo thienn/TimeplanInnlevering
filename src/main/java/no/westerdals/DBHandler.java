@@ -11,6 +11,7 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class DBHandler {
+<<<<<<< HEAD
 
     public Connection getConnection() {
         MysqlDataSource ds = new MysqlDataSource();
@@ -20,10 +21,25 @@ public class DBHandler {
         ds.setUser("root");
         ds.setPassword("gamer1234");
 
+=======
+    
+    public Connection getConnection() {
+        MysqlDataSource ds = new MysqlDataSource();
+
+        ds.setDatabaseName("myDB");
+        ds.setServerName("localhost");
+        ds.setUser("root");
+        ds.setPassword("gamer1234");
+
+>>>>>>> origin/master
         Connection con = null;
 
         try {
             con = ds.getConnection();
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Database Connection Failed");
@@ -39,7 +55,11 @@ public class DBHandler {
                     + "starttime varchar(20),"
                     + "endtime varchar(20)"
                     + ");";
+<<<<<<< HEAD
             Statement stmt = con.createStatement();
+=======
+           Statement stmt = con.createStatement();
+>>>>>>> origin/master
             stmt.execute(q);
             System.out.println("Successfully created table");
             stmt.close();
@@ -63,7 +83,11 @@ public class DBHandler {
     void readTable() {
         try (Connection con = getConnection()){
             Statement stmt = con.createStatement();
+<<<<<<< HEAD
             ResultSet rs = stmt.executeQuery("SELECT * FROM EMNER");
+=======
+           ResultSet rs = stmt.executeQuery("SELECT * FROM EMNER");
+>>>>>>> origin/master
             readTablePrint(rs);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -175,4 +199,9 @@ public class DBHandler {
         }
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/master
 }
