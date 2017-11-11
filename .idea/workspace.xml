@@ -3,12 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b806a61e-3f58-4631-a123-9e40d390adb5" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/TimeplanInnlevering.iml" afterPath="" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/InputHandler.java" afterPath="" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/Client.class" afterPath="$PROJECT_DIR$/target/classes/no/westerdals/Client.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/DBHandler.class" afterPath="$PROJECT_DIR$/target/classes/no/westerdals/DBHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/InputHandler.class" afterPath="$PROJECT_DIR$/target/classes/no/westerdals/InputHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/no/westerdals/AppTest.class" afterPath="$PROJECT_DIR$/target/test-classes/no/westerdals/AppTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -17,6 +22,12 @@
 =======
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/no/westerdals/InputHandler.class" afterPath="" />
 >>>>>>> origin/master
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TimeplanInnlevering.iml" afterPath="$PROJECT_DIR$/TimeplanInnlevering.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" afterPath="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" afterPath="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -30,9 +41,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="165">
               <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -62,6 +74,10 @@
 =======
             <state relative-caret-position="300">
               <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+=======
+            <state relative-caret-position="355">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
               <folding />
 >>>>>>> origin/master
             </state>
@@ -113,6 +129,7 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file leaf-file-name="InputHandler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/InputHandler.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -137,18 +154,29 @@
                 <marker date="1510437911426" expanded="true" signature="5395:5434" ph="select * fro... EMNER" />
 =======
       <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="true">
+=======
+      <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="false">
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
         <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2047">
-              <caret line="22" column="6" lean-forward="false" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+            <state relative-caret-position="55">
+              <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+<<<<<<< HEAD
                 <marker date="1510436934835" expanded="true" signature="845:1097" ph="CREATE TABLE... EMNER" />
                 <marker date="1510436934835" expanded="true" signature="1503:1519" ph="DROP TABLE E... " />
                 <marker date="1510436934835" expanded="true" signature="1887:1906" ph="SELECT * FRO... EMNER" />
                 <marker date="1510436934835" expanded="true" signature="3029:3064" ph="INSERT INTO EMNER... " />
                 <marker date="1510436934835" expanded="true" signature="5336:5375" ph="select * fro... EMNER" />
 >>>>>>> origin/master
+=======
+                <marker date="1510436302918" expanded="true" signature="874:1126" ph="CREATE TABLE... EMNER" />
+                <marker date="1510436302918" expanded="true" signature="1523:1539" ph="DROP TABLE E... " />
+                <marker date="1510436302918" expanded="true" signature="1927:1946" ph="SELECT * FRO... EMNER" />
+                <marker date="1510436302918" expanded="true" signature="3090:3125" ph="INSERT INTO EMNER... " />
+                <marker date="1510436302918" expanded="true" signature="5397:5436" ph="select * fro... EMNER" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
               </folding>
             </state>
           </provider>
@@ -203,6 +231,7 @@
         <option value="$PROJECT_DIR$/Emner.csv" />
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Util.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/ServerSocket.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/ClientUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Server.java" />
@@ -214,6 +243,10 @@
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" />
 >>>>>>> origin/master
+=======
+        <option value="$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/no/westerdals/Client.java" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
       </list>
     </option>
   </component>
@@ -545,10 +578,14 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="45730000" />
 =======
     <option name="totallyTimeSpent" value="41255000" />
 >>>>>>> origin/master
+=======
+    <option name="totallyTimeSpent" value="40847000" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="778" extended-state="0" />
@@ -616,6 +653,7 @@
           <folding>
             <element signature="imports" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <marker date="1510437911426" expanded="true" signature="902:1154" ph="CREATE TABLE... EMNER" />
             <marker date="1510437911426" expanded="true" signature="1561:1577" ph="DROP TABLE E... " />
             <marker date="1510437911426" expanded="true" signature="1946:1965" ph="SELECT * FRO... EMNER" />
@@ -628,6 +666,13 @@
             <marker date="1510436934835" expanded="true" signature="3029:3064" ph="INSERT INTO EMNER... " />
             <marker date="1510436934835" expanded="true" signature="5336:5375" ph="select * fro... EMNER" />
 >>>>>>> origin/master
+=======
+            <marker date="1510436302918" expanded="true" signature="874:1126" ph="CREATE TABLE... EMNER" />
+            <marker date="1510436302918" expanded="true" signature="1523:1539" ph="DROP TABLE E... " />
+            <marker date="1510436302918" expanded="true" signature="1927:1946" ph="SELECT * FRO... EMNER" />
+            <marker date="1510436302918" expanded="true" signature="3090:3125" ph="INSERT INTO EMNER... " />
+            <marker date="1510436302918" expanded="true" signature="5397:5436" ph="select * fro... EMNER" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
           </folding>
         </state>
       </provider>
@@ -669,6 +714,7 @@
           <folding>
             <element signature="imports" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <marker date="1510437911426" expanded="true" signature="902:1154" ph="CREATE TABLE... EMNER" />
             <marker date="1510437911426" expanded="true" signature="1561:1577" ph="DROP TABLE E... " />
             <marker date="1510437911426" expanded="true" signature="1946:1965" ph="SELECT * FRO... EMNER" />
@@ -681,6 +727,13 @@
             <marker date="1510436934835" expanded="true" signature="3029:3064" ph="INSERT INTO EMNER... " />
             <marker date="1510436934835" expanded="true" signature="5336:5375" ph="select * fro... EMNER" />
 >>>>>>> origin/master
+=======
+            <marker date="1510436302918" expanded="true" signature="874:1126" ph="CREATE TABLE... EMNER" />
+            <marker date="1510436302918" expanded="true" signature="1523:1539" ph="DROP TABLE E... " />
+            <marker date="1510436302918" expanded="true" signature="1927:1946" ph="SELECT * FRO... EMNER" />
+            <marker date="1510436302918" expanded="true" signature="3090:3125" ph="INSERT INTO EMNER... " />
+            <marker date="1510436302918" expanded="true" signature="5397:5436" ph="select * fro... EMNER" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
           </folding>
         </state>
       </provider>
@@ -714,6 +767,7 @@
           <folding>
             <element signature="imports" expanded="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
             <marker date="1510437911426" expanded="true" signature="902:1154" ph="CREATE TABLE... EMNER" />
             <marker date="1510437911426" expanded="true" signature="1561:1577" ph="DROP TABLE E... " />
             <marker date="1510437911426" expanded="true" signature="1946:1965" ph="SELECT * FRO... EMNER" />
@@ -726,6 +780,13 @@
             <marker date="1510436934835" expanded="true" signature="3029:3064" ph="INSERT INTO EMNER... " />
             <marker date="1510436934835" expanded="true" signature="5336:5375" ph="select * fro... EMNER" />
 >>>>>>> origin/master
+=======
+            <marker date="1510436302918" expanded="true" signature="874:1126" ph="CREATE TABLE... EMNER" />
+            <marker date="1510436302918" expanded="true" signature="1523:1539" ph="DROP TABLE E... " />
+            <marker date="1510436302918" expanded="true" signature="1927:1946" ph="SELECT * FRO... EMNER" />
+            <marker date="1510436302918" expanded="true" signature="3090:3125" ph="INSERT INTO EMNER... " />
+            <marker date="1510436302918" expanded="true" signature="5397:5436" ph="select * fro... EMNER" />
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
           </folding>
         </state>
       </provider>
@@ -920,6 +981,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1510436302918" expanded="true" signature="874:1126" ph="CREATE TABLE... EMNER" />
+            <marker date="1510436302918" expanded="true" signature="1523:1539" ph="DROP TABLE E... " />
+            <marker date="1510436302918" expanded="true" signature="1927:1946" ph="SELECT * FRO... EMNER" />
+            <marker date="1510436302918" expanded="true" signature="3090:3125" ph="INSERT INTO EMNER... " />
+            <marker date="1510436302918" expanded="true" signature="5397:5436" ph="select * fro... EMNER" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/InputHandler.java">
 >>>>>>> origin/master
       <provider selected="true" editor-type-id="text-editor">
@@ -966,12 +1042,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        <state relative-caret-position="355">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/no/westerdals/DBHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2047">
@@ -988,6 +1065,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> parent of e61fd18... Refactor - Removed some unnecessary declarations
   </component>
   <component name="masterDetails">
     <states>
