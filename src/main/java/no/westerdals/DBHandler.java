@@ -2,25 +2,22 @@ package no.westerdals;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.sql.*;
-import java.util.InputMismatchException;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 public class DBHandler {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    MysqlDataSource ds = new MysqlDataSource();
+    Connection con;
+    /*
+    public static void main(String[] args) {
+>>>>>>> parent of 5851f8e... Innlevering 2 init upload
 
-    public Connection getConnection() {
-        MysqlDataSource ds = new MysqlDataSource();
+    }*/
 
-        ds.setDatabaseName("myDB");
-        ds.setServerName("localhost");
-        ds.setUser("root");
-        ds.setPassword("gamer1234");
-
+<<<<<<< HEAD
 =======
     
     public Connection getConnection() {
@@ -31,6 +28,9 @@ public class DBHandler {
         ds.setUser("root");
         ds.setPassword("gamer1234");
 <<<<<<< HEAD
+=======
+    public Connection getConnection() {
+>>>>>>> parent of 5851f8e... Innlevering 2 init upload
 
 >>>>>>> origin/master
 =======
@@ -39,15 +39,22 @@ public class DBHandler {
         try {
             con = ds.getConnection();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/master
+=======
+            ds.setDatabaseName("myDB");
+            ds.setServerName("localhost");
+            ds.setUser("root");
+            ds.setPassword("gamer1234");
+>>>>>>> parent of 5851f8e... Innlevering 2 init upload
         } catch (SQLException e) {
             e.printStackTrace();
-            System.out.println("Database Connection Failed");
         }
         return con;
     }
+<<<<<<< HEAD
 
     void createTable() {
         Statement stmt = null;
@@ -217,4 +224,6 @@ public class DBHandler {
 
 
 >>>>>>> origin/master
+=======
+>>>>>>> parent of 5851f8e... Innlevering 2 init upload
 }

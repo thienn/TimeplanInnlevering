@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TimeplanInnleveringSocket.iml" filepath="$PROJECT_DIR$/TimeplanInnleveringSocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TimeplanInnlevering.iml" filepath="$PROJECT_DIR$/TimeplanInnlevering.iml" />
     </modules>
   </component>
 </project>
