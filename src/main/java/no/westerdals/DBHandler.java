@@ -19,7 +19,9 @@ public class DBHandler {
         ds.setServerName("localhost");
         ds.setUser("root");
         ds.setPassword("gamer1234");
+
         Connection con = null;
+
         try {
             con = ds.getConnection();
 
@@ -30,7 +32,6 @@ public class DBHandler {
     }
 
     void createTable() {
-        Statement stmt = null;
         try (Connection con = getConnection()) {
             String q = "CREATE TABLE EMNER(" + "name varchar(50),"
                     + "subjectid varchar(10), "
@@ -38,7 +39,7 @@ public class DBHandler {
                     + "starttime varchar(20),"
                     + "endtime varchar(20)"
                     + ");";
-            stmt = con.createStatement();
+           Statement stmt = con.createStatement();
             stmt.execute(q);
             System.out.println("Successfully created table");
             stmt.close();
@@ -60,10 +61,9 @@ public class DBHandler {
     }
 
     void readTable() {
-        ResultSet rs = null;
         try (Connection con = getConnection()){
             Statement stmt = con.createStatement();
-            rs = stmt.executeQuery("SELECT * FROM EMNER");
+           ResultSet rs = stmt.executeQuery("SELECT * FROM EMNER");
             readTablePrint(rs);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -91,9 +91,8 @@ public class DBHandler {
     // Reference for importing of CSV - https://coderanch.com/t/572623/databases/insert-CSV-values-file-MySQL
     //Read from CSV File and input to DB
     void readFile() throws IOException {
-        PreparedStatement stmt = null;
         try (Connection con = getConnection()){
-            stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
+            PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
 
 
             //Open a file input stream for CSV - Towards a specific file
