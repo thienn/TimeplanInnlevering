@@ -18,10 +18,7 @@ public class DBHandler {
     private static String userName;
     private static String password;
 
-
-
     private Properties properties;
-
 
     public DBHandler() {
         try
@@ -41,7 +38,6 @@ public class DBHandler {
             e.printStackTrace();
         }
     }
-
 
     public Connection getConnection() {
         MysqlDataSource ds = new MysqlDataSource();
@@ -66,9 +62,8 @@ public class DBHandler {
                     + "starttime varchar(20),"
                     + "endtime varchar(20)"
                     + ");";
-           Statement stmt = con.createStatement();
 
-            stmt = con.createStatement();
+            Statement stmt = con.createStatement();
             stmt.execute(q);
             System.out.println("Successfully created table");
             stmt.close();
@@ -93,7 +88,6 @@ public class DBHandler {
         try (Connection con = getConnection()){
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM EMNER");
-            rs = stmt.executeQuery("SELECT * FROM EMNER");
             readTablePrint(rs);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -127,7 +121,7 @@ public class DBHandler {
             //Open a file input stream for CSV - Towards a specific file
             BufferedReader CSVreader = new BufferedReader(new FileReader("Emner.csv"));
 
-            String lineRead; //line read from csv
+            String lineRead;
             Scanner scanner;
 
             CSVreader.readLine(); //ignores the first line
@@ -136,6 +130,7 @@ public class DBHandler {
             try {
                 while ((lineRead = CSVreader.readLine()) != null) {
                     scanner = new Scanner(lineRead);
+                    // separator for next in CSV file (can change depending on file-type)
                     scanner.useDelimiter(";");
                     while (scanner.hasNext()) {
                         try {
@@ -146,12 +141,10 @@ public class DBHandler {
                             stmt.setString(5, scanner.next());
                             stmt.executeUpdate();
                         } catch (NoSuchElementException e) {
-
+                            e.printStackTrace();
                         }
                     }
-
                     System.out.println("Subject added to DB" );
-
                 }
                 stmt.close();
                 CSVreader.close();
@@ -176,20 +169,19 @@ public class DBHandler {
             if(values == 1) {
                 readTable();
             } else if (values == 2) {
-                System.out.println("Which subject do you want - (Use subjectid)? ");
-                String emnekode = input.next();
+                System.out.println("Which subject do you want - (Use subjectid): ");
+                String subjectid = input.next();
                 try {
-                    // Next make sure this goes into a loop, if invalid, report back to user, then ask for another value
-                    String subjectid = emnekode;
                     PreparedStatement prepStmt = con.prepareStatement("select * from EMNER where subjectid = ?");
                     prepStmt.setString(1, subjectid);
                     ResultSet rs = prepStmt.executeQuery();
                     readTablePrint(rs);
-                    System.out.println("Want to check again? 1 for yes, 2 for exit");
+                    System.out.println("Want to check again? 1 for yes, 2 for exit: ");
                     check = input.nextInt();
                     if(check == 1) {
                         userInput();
                     } else if (check == 2) {
+                        // Exit program on userInput
                         System.exit(0);
                     }
                 } catch (SQLException e) {
@@ -197,11 +189,11 @@ public class DBHandler {
                 }
             }
         } catch (InputMismatchException e) {
+            // Catch for cases where there is invalid input, runs the program again instead of crashing
             System.out.println("Input invalid - need to be 1 or 2");
             userInput();
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
 }

@@ -1,7 +1,6 @@
 package no.westerdals;
 
 import java.io.IOException;
-import java.sql.*;
 
 public class Client {
     public static void main(String[] args) {
@@ -27,7 +26,8 @@ public class Client {
         }
 
         System.out.println("Setup of DB and populating successful");
-        // Ask for user input - Read part
+
+        // Ask for user input - then run the DBHandler hidden from "user"
         program.userInput();
     }
 }
