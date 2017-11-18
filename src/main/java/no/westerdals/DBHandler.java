@@ -12,6 +12,19 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.Scanner;
 
+/**
+ * Class that connects to a database through JBDC.
+ * Methods that can be called upon.
+ * References for structure on connection taken from
+ * https://www.youtube.com/watch?v=BOUMR85B-V0 series
+ *
+ * References about properties
+ * https://www.mkyong.com/java/java-properties-file-examples/
+ * https://www.youtube.com/watch?v=-LrmzNDPVx8
+ *
+ * @author Thien Cong Pham
+ */
+
 public class DBHandler {
     private static String dbName;
     private static String serverName;
@@ -39,6 +52,10 @@ public class DBHandler {
         }
     }
 
+    /**
+     * Get connection for Database set by config.properties
+     * @return con for the rest of the methods to use
+     */
     public Connection getConnection() {
         MysqlDataSource ds = new MysqlDataSource();
         ds.setDatabaseName(dbName);
@@ -112,8 +129,11 @@ public class DBHandler {
 
     }
 
-    // Reference for importing of CSV - https://coderanch.com/t/572623/databases/insert-CSV-values-file-MySQL
-    //Read from CSV File and input to DB
+
+    /**
+     * Reads from file "Supports only CSV then insert into a DB accordingly as long as it has a next line
+     * @throws IOException
+     */
     void readFile() throws IOException {
         try (Connection con = getConnection()){
             PreparedStatement stmt = con.prepareStatement("INSERT INTO EMNER VALUES(?,?,?,?,?)");
@@ -159,6 +179,11 @@ public class DBHandler {
         }
     }
 
+    /**
+     * Method for getting user input. User has two options 1 for whole table
+     * 2 for specific one. Then asks again if the user want to check up on another one
+     * If not they can exit with number 2
+     */
     void userInput() {
         int values;
         int check;
@@ -175,7 +200,13 @@ public class DBHandler {
                     PreparedStatement prepStmt = con.prepareStatement("select * from EMNER where subjectid = ?");
                     prepStmt.setString(1, subjectid);
                     ResultSet rs = prepStmt.executeQuery();
-                    readTablePrint(rs);
+
+                    //If check in case there is nothing found in the DB
+                    if(rs.next() == false) {
+                        System.out.println("Nothing in the database for that subjectID");
+                    } else {
+                        readTablePrint(rs);
+                    }
                     System.out.println("Want to check again? 1 for yes, 2 for exit: ");
                     check = input.nextInt();
                     if(check == 1) {
