@@ -120,7 +120,12 @@ public class DBHandler {
                 String starttime = rs.getString("starttime");
                 String endtime = rs.getString("endtime");
 
-                System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime );
+                //If check in case there is nothing found in the DB
+                if(rs.wasNull()) {
+                    System.out.println("Nothing in the database for that subjectID");
+                } else {
+                    System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime);
+                }
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -200,19 +205,15 @@ public class DBHandler {
                     PreparedStatement prepStmt = con.prepareStatement("select * from EMNER where subjectid = ?");
                     prepStmt.setString(1, subjectid);
                     ResultSet rs = prepStmt.executeQuery();
+                    readTablePrint(rs);
 
-                    //If check in case there is nothing found in the DB
-                    if(rs.next() == false) {
-                        System.out.println("Nothing in the database for that subjectID");
-                    } else {
-                        readTablePrint(rs);
-                    }
                     System.out.println("Want to check again? 1 for yes, 2 for exit: ");
                     check = input.nextInt();
                     if(check == 1) {
                         userInput();
                     } else if (check == 2) {
                         // Exit program on userInput
+                        System.out.println("Program ended");
                         System.exit(0);
                     }
                 } catch (SQLException e) {

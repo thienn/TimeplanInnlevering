@@ -30,13 +30,12 @@ public class Client {
         // Runs through method for reading from CSV File
         try {
             program.readFile();
+            System.out.println("Setup of DB and populating successful");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Setup of DB and populating successful");
-
-        // Ask for user input 
+        // Ask for user input
         program.userInput();
     }
 }
