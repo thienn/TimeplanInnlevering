@@ -120,13 +120,9 @@ public class DBHandler {
                 String starttime = rs.getString("starttime");
                 String endtime = rs.getString("endtime");
 
-                //If check in case there is nothing found in the DB
-                if(rs.wasNull()) {
-                    System.out.println("Nothing in the database for that subjectID");
-                } else {
-                    System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime);
-                }
+                System.out.println("Emnenavn: " + name + " Emnekode: " + subjectid + " Foreleser: " + lecturer + " Startdato: " + starttime + " Sluttdato: " + endtime);
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -198,6 +194,7 @@ public class DBHandler {
             values = input.nextInt();
             if(values == 1) {
                 readTable();
+                userInput();
             } else if (values == 2) {
                 System.out.println("Which subject do you want - (Use subjectid): ");
                 String subjectid = input.next();
@@ -219,6 +216,9 @@ public class DBHandler {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
+            } else {
+                System.out.println("Input invalid - need to be 1 or 2");
+                userInput();
             }
         } catch (InputMismatchException e) {
             // Catch for cases where there is invalid input, runs the program again instead of crashing
